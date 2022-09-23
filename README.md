@@ -23,7 +23,7 @@ git add .
 ```
 **Hacer un nuevo commit**
 ```
-git commit -m 
+git commit -m "{nombre_commit}"
  ```
 **Subir commits al repositorio**
 ```
