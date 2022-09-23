@@ -47,3 +47,18 @@ git pull
 git checkout {nombre_de_mi_rama}
 git merge {nombre_rama_a_la_que_quiero_subir_cambios}
 ```
+
+## Etiquetas
+
+**Ver todas las etiquetas**
+```
+git tag
+```
+**Crear una nueva etiqueta**
+```
+git tag -a {version (v1.0)} -m "{comentario_etiqueta}"
+```
+**Subir etiquetas al repositorio**
+```
+git push --tags
+```
