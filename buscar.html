@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photogram</title>
+</head>
+
+<body>
+    <header>
+        <img src="src/logo.png" alt="Isotipo de una camara">
+        <h1>Photogram</h1>
+        <h2>Comparte tus fotos con tus amigos</h2>
+    </header>
+    
+    <hr>
+    <nav>
+        <a href="buscar.html">Buscar</a>
+        <form action="index2.html" method="get"><!-- TODO cambiar a post-->
+            <label for="usuario">Usuario: </label><input type="text" name="usuario" id="usuario" required>
+            <label for="contraseña">Contraseña: </label><input type="password" name="contraseña" id="contraseña" required>
+            <input type="submit" value="Entrar">
+        </form>
+        <a href="registro.html">Crear cuenta</a>
+    </nav>
+    <hr>
+
+    <form action="buscar2.html" method="get">
+        <label for="titulo">Titulo: </label><input type="text" name="titulo" id="titulo">
+        <label for="fechaDesde">Fecha entre: </label><input type="date" name="fechaDesde" id="fechaDesde">
+        <label for="fechaHasta"> y </label><input type="date" name="fechaHasta" id="fechaHasta">
+        <label for="paises">Pais: </label>
+        <select name="paises" id="paises">
+            <option>Alemania</option>
+            <option>Andorra</option>
+            <option>Dinamarca</option>
+            <option>España</option>
+            <option>Irlanda</option>
+            <option>Islandia</option>
+            <option>Italia</option>
+            <option>Malta</option>
+            <option>Portugal</option>
+            <option>Uruguay</option>
+        </select>
+        <input type="submit" value="Buscar">
+    </form>
+
+    <footer>
+        <p>Julio Sala Gallardo y Ana Mª Soler Guijarro &copy; 2022-2023 <br> Diseño de Aplicaciones Web</p>
+    </footer>
+
+</body>
+
+</html>
