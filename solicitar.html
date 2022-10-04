@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photogram</title>
+    <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index2.html"><img src="src/logo.png" alt="Isotipo de una camara"></a>
+        <h1>Photogram</h1>
+        <h2>Comparte tus fotos con tus amigos</h2>
+        <hr>
+        <nav>
+            <a href="buscar.html">Buscar</a>
+            <a href="#">Subir foto</a>
+            <a href="index.html">Cerrar Sesión</a>
+            <a href="usuario.html">Usuario</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <h2>Tarifas</h2>
+        <table>
+            <tr>
+                <th>Concepto</th>
+                <th>Tarifa</th>
+            </tr>
+            <tr>
+                <td>menos de 5 páginas</td>
+                <td>0,10 euros por página</td>
+            </tr>
+            <tr>
+                <td>entre 5 y 11 páginas</td>
+                <td>0,08 euros por página</td>
+            </tr>
+            <tr>
+                <td>mas de 11 páginas</td>
+                <td>0,07 euros por página</td>
+            </tr>
+            <tr>
+                <td>Blanco y negro</td>
+                <td>0 euros</td>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td>0,05 euros por foto</td>
+            </tr>
+            <tr>
+                <td>Resolución > 300 dpi</td>
+                <td>0,02 euros por foto</td>
+            </tr>
+        </table>
+
+        <form action="solicitar2.html" method="post">
+            <h2>Formulario de solicitud</h2>
+            <p>Rellena el siguiente formulario para solicitar su álbum</p>
+            <label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre" maxlength="200" required>
+            <br>
+            <label for="titulo">Titulo del álbum: </label><input type="text" name="titulo" id="titulo" maxlength="200" required>
+            <br>
+            <label for="descripcion">Descripcion del álbum: </label><input type="text" name="descripcion" id="descripcion" placeholder="dedicatoria, descripción de su contenido, etc" maxlength="4000">
+            <br>
+            <label for="correo">Correo electrónico: </label><input type="email" name="correo" id="correo" maxlength="200" placeholder="del destinatario" required>
+            <br>
+            <label for="calle">Direccción: </label><input type="text" name="calle" id="calle" placeholder="Calle" required>
+            <label for="numeroCalle"></label><input type="text" name="numeroCalle" id="numeroCalle" placeholder="Número" required>
+            <label for="numeroPiso"></label><input type="text" name="numeroPiso" id="numeroPiso" placeholder="Piso">
+            <label for="codigoPostal"></label><input type="text" name="codigoPostal" id="codigoPostal" placeholder="CP" required>
+            <label for="localidad"></label>
+            <select name="localidad" id="localidad">
+                <option>Localidad 1</option>
+                <option>Localidad 2</option>
+                <option>Localidad 3</option>
+            </select>
+            <label for="provincia"></label>
+            <select name="provincia" id="provincia">
+                <option>Provincia 1</option>
+                <option>Provincia 2</option>
+                <option>Provincia 3</option>
+            </select>
+            <br>
+            <label for="telefono">Teléfono: </label><input type="text" name="telefono" id="telefono" maxlength="200" placeholder="+## ### ### ###" required>
+            <br>
+            <label for="copias">Número copias: </label><input type="number" name="copias" id="copias" min="1" pattern="{0-9}" value="1">
+            <br>
+            <label for="resolucion">Resolución: </label>
+            <select name="resolucion" id="resolucion">
+                <option>150 dpi</option>
+                <option>300 dpi</option>
+                <option>450 dpi</option>
+                <option>600 dpi</option>
+                <option>750 dpi</option>
+                <option>900 dpi</option>
+            </select>
+            <br>
+            <label for="album">Álbum: </label>
+            <select name="album" id="album">
+                <option>Álbum 1</option>
+                <option>Álbum 2</option>
+                <option>Álbum 3</option>
+            </select>
+            <br>
+            <label for="fecha">Fecha aproximada de recepción: <input type="date" name="fecha" id="fecha"></label>
+            <br>
+            <label for="color">Impresión a color: <input type="checkbox" name="color" id="color"></label>
+            <br>
+            <input type="submit" value="Solicitar álbum">
+        </form>
+    </main>
+
+    <footer>
+        <p>Julio Sala Gallardo y Ana Mª Soler Guijarro &copy; 2022-2023 <br> Diseño de Aplicaciones Web</p>
+    </footer>
+
+
+</body>
+
+</html>
