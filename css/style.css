@@ -89,7 +89,7 @@ article {
 
 article:hover{
     border-radius: 15%;
-    filter:sepia()
+    background-color: var(--clr-primary);
 }
 
 article section{
@@ -102,12 +102,16 @@ article section{
 
 /* PAGINA DE AVISO */
 
-main img {
-    scale: 0.8;
+main img{
+    margin: 1em;
 }
 
 .botones{
-    margin: 0 0 3em;
+    margin: 2em 0 3em;
+}
+
+.center{
+    text-align: center;
 }
 
 .boton{
