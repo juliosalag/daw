@@ -5,81 +5,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Photogram</title>
 </head>
 
 <body>
     <header>
-        <a href="index.html"><img src="src/logo.png" alt="Isotipo de una camara"></a>
-        <h1>Photogram</h1>
-        <h2>Comparte tus fotos con tus amigos</h2>
-        <hr>
+        <div class="logotipo">
+            <a href="index.html"><img src="src/logo.png" alt="Isotipo de una camara"></a>
+            <h1>Photogram</h1>
+            <p>Comparte tus fotos con tus amigos</p>
+        </div>
         <nav>
-            <a href="buscar.html">Buscar</a>
-            <a href="registro.html">Crear cuenta</a>
+            <a href="index.html">
+                <i class="gg-home"></i>
+                <p>Inicio</p>
+            </a>
+            <a href="buscar.html">
+                <i class="gg-search"></i>
+                <p>Buscar</p>
+            </a>
+            <a href="inicio.html">
+                <i class="gg-log-in"></i>
+                <p>Iniciar sesión</p>
+            </a>
+            <a href="registro.html">
+                <i class="gg-user-add"></i>
+                <p>Crear cuenta</p>
+            </a>
         </nav>
-        <hr>
-        <form action="index2.html" method="post">
-            <label for="usuario">Usuario: </label><input type="text" name="usuario" id="usuario" required>
-            <label for="contraseña">Contraseña: </label><input type="password" name="contraseña" id="contraseña" required>
-            <input type="submit" value="Entrar">
-        </form>
     </header>
 
     <main>
-        <article>
-            <a href="aviso.html">
-                <img src="src/img1.jpg" alt="Campo de flores">
-                <section>
-                    <h3>Campo de flores (no accesible)</h3>
-                    <p>23/04/2019 - Andorra</p>
-                </section>
-            </a>
-        </article>
+        <h2>Resultado búsqueda</h2>
+        <div class="fotos">
+            <article>
+                <a href="aviso.html">
+                    <img src="src/img1.jpg" alt="Campo de flores">
+                    <section>
+                        <p>Campo de flores (no accesible)</p>
+                        <p>23/04/2019 - Andorra</p>
+                    </section>
+                </a>
+            </article>
 
-        <article>
-            <a href="foto.html">
-                <img src="src/img2.jpg" alt="Flores">
-                <section>
-                    <h3>Flor</h3>
-                    <p>24/04/2019 - Andorra</p>
-                </section>
-            </a>
-        </article>
+            <article>
+                <a href="foto.html">
+                    <img src="src/img2.jpg" alt="Flores">
+                    <section>
+                        <p>Flor</p>
+                        <p>24/04/2019 - Andorra</p>
+                    </section>
+                </a>
+            </article>
 
-        <article>
-            <a href="foto.html">
-                <img src="src/img3.jpg" alt="Ordenador portatil">
-                <section>
-                    <h3>Trabajando</h3>
-                    <p>25/05/2020 - España</p>
-                </section>
-            </a>
-        </article>
+            <article>
+                <a href="foto.html">
+                    <img src="src/img3.jpg" alt="Ordenador portatil">
+                    <section>
+                        <p>Trabajando</p>
+                        <p>25/05/2020 - España</p>
+                    </section>
+                </a>
+            </article>
 
-        <article>
-            <a href="foto.html">
-                <img src="src/img4.jpg" alt="Camara de fotos">
-                <section>
-                    <h3>Dia de fotos</h3>
-                    <p>13/09/2021 - Alemania</p>
-                </section>
-            </a>
-        </article>
+            <article>
+                <a href="foto.html">
+                    <img src="src/img4.jpg" alt="Camara de fotos">
+                    <section>
+                        <p>Dia de fotos</p>
+                        <p>13/09/2021 - Alemania</p>
+                    </section>
+                </a>
+            </article>
 
-        <article>
-            <a href="foto.html">
-                <img src="src/img5.jpg" alt="Señora cogiendo un corazon">
-                <section>
-                    <h3>Amor al arte</h3>
-                    <p>10/12/2021 - Dinamarca</p>
-                </section>
-            </a>
-        </article>
+            <article>
+                <a href="foto.html">
+                    <img src="src/img5.jpg" alt="Señora cogiendo un corazon">
+                    <section>
+                        <p>Amor al arte</p>
+                        <p>10/12/2021 - Dinamarca</p>
+                    </section>
+                </a>
+            </article>
+        </div>
     </main>
 
     <footer>
-        <p>Julio Sala Gallardo y Ana Mª Soler Guijarro &copy; 2022-2023 <br> Diseño de Aplicaciones Web</p>
+        <p>Julio Sala Gallardo y Ana Mª Soler Guijarro <br><br>&copy; 2022-2023 <br><br> Diseño de Aplicaciones Web</p>
     </footer>
 
 </body>

@@ -5,25 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
     <title>Photogram</title>
 </head>
 
 <body>
     <header>
-        <a href="index.html"><img src="src/logo.png" alt="Isotipo de una camara"></a>
-        <h1>Photogram</h1>
-        <h2>Comparte tus fotos con tus amigos</h2>
-        <hr>
+        <div class="logotipo">
+            <a href="index.html"><img src="src/logo.png" alt="Isotipo de una camara"></a>
+            <h1>Photogram</h1>
+            <p>Comparte tus fotos con tus amigos</p>
+        </div>
         <nav>
-            <a href="buscar.html">Buscar</a>
-            <a href="registro.html">Crear cuenta</a>
+            <a href="index.html">
+                <i class="gg-home"></i>
+                <p>Inicio</p>
+            </a>
+            <a href="buscar.html">
+                <i class="gg-search"></i>
+                <p>Buscar</p>
+            </a>
+            <a href="inicio.html">
+                <i class="gg-log-in"></i>
+                <p>Iniciar sesión</p>
+            </a>
+            <a href="registro.html">
+                <i class="gg-user-add"></i>
+                <p>Crear cuenta</p>
+            </a>
         </nav>
-        <hr>
-        <form action="index2.html" method="post">
-            <label for="usuario">Usuario: </label><input type="text" name="usuario" id="usuario" required>
-            <label for="contraseña">Contraseña: </label><input type="password" name="contraseña" id="contraseña" required>
-            <input type="submit" value="Entrar">
-        </form>
     </header>
 
     <main>
@@ -49,7 +60,7 @@
     </main>
 
     <footer>
-        <p>Julio Sala Gallardo y Ana Mª Soler Guijarro &copy; 2022-2023 <br> Diseño de Aplicaciones Web</p>
+        <p>Julio Sala Gallardo y Ana Mª Soler Guijarro <br><br>&copy; 2022-2023 <br><br> Diseño de Aplicaciones Web</p>
     </footer>
 
 </body>

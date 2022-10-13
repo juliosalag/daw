@@ -5,25 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Photogram</title>
 </head>
 
 <body>
     <header>
-        <a href="index.html"><img src="src/logo.png" alt="Isotipo de una camara"></a>
-        <h1>Photogram</h1>
-        <h2>Comparte tus fotos con tus amigos</h2>
+        <div class="logotipo">
+            <a href="index.html"><img src="src/logo.png" alt="Isotipo de una camara"></a>
+            <h1>Photogram</h1>
+            <p>Comparte tus fotos con tus amigos</p>
+        </div>
+        <nav>
+            <a href="index.html">
+                <i class="gg-home"></i>
+                <p>Inicio</p>
+            </a>
+            <a href="buscar.html">
+                <i class="gg-search"></i>
+                <p>Buscar</p>
+            </a>
+            <a href="inicio.html">
+                <i class="gg-log-in"></i>
+                <p>Iniciar sesión</p>
+            </a>
+            <a href="registro.html">
+                <i class="gg-user-add"></i>
+                <p>Crear cuenta</p>
+            </a>
+        </nav>
     </header>
 
     <main>
-        <p>Lo sentimos, no puedes acceder a este contenido sin iniciar sesion</p>
-        <img src="src/cara.jpg" alt="Cara super triste">
-        <a href="registro.html">Crear cuenta</a>
-        <a href="inicio.html">Iniciar sesion</a>
+        <p id="disculpas">Lo sentimos, no puedes acceder a este contenido sin iniciar sesion</p>
+        <center>
+            <img src="src/cara.jpg" alt="Cara super triste">
+            <div class="botones">
+                <a href="registro.html" class="boton">Crear cuenta</a>   
+                <a href="inicio.html" class="boton">Iniciar sesion</a>
+            </div>
+        </center>
     </main>
 
     <footer>
-        <p>Julio Sala Gallardo y Ana Mª Soler Guijarro &copy; 2022-2023 <br> Diseño de Aplicaciones Web</p>
+        <p>Julio Sala Gallardo y Ana Mª Soler Guijarro <br><br>&copy; 2022-2023 <br><br> Diseño de Aplicaciones Web</p>
     </footer>
     
 

@@ -1,0 +1,166 @@
+@import url('https://css.gg/css');
+:root {
+    --clr-background: #F6E1E1;
+    --clr-primary: #ff9d76;
+    --clr-secondary: #333366;
+    --clr-accent: #EB4D55;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+html, body {
+    background-color: var(--clr-background);
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+
+.logotipo{
+    display: flex;
+    flex-direction: row;
+}
+
+.logotipo p{
+    display: none;
+}
+
+.logotipo h1{
+    text-align: center;
+    margin: auto;
+    font-size: 2.5em;
+}
+
+/* BARRA DE NAVEGACIÓN */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    background-color: var(--clr-secondary);
+    align-items: center;
+}
+
+nav *{
+    height: 100%;
+    color: var(--clr-primary);
+    background-color: var(--clr-secondary);
+    display: flex;
+    flex-direction: row;
+}
+
+nav a p{
+    display: none;
+}
+nav * i{
+    font-size: 2em;
+}
+
+/* MAIN */
+
+h2 {
+    text-align: center;
+    padding: 1em;
+    font-size: 1.5em;
+}
+
+.fotos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+article {
+    border-radius: 10%;
+    margin:1em;
+    background-color: var(--clr-secondary);
+    text-align: center;
+    padding: 1em 2em;
+    transition: 0.2s;
+}
+
+article:hover{
+    border-radius: 15%;
+    filter:sepia()
+}
+
+article section{
+    background-color: var(--clr-primary);
+    border-style:groove;
+    margin-top: 0.75em;
+    font-size: small;
+    color: var(--clr-secondary);
+}
+
+/* PAGINA DE AVISO */
+
+main img {
+    scale: 0.8;
+}
+
+.botones{
+    margin: 0 0 3em;
+}
+
+.boton{
+    margin: 1em;
+    background-color: var(--clr-primary);
+    color: var(--clr-secondary);
+    padding: 1em 1em;
+    border-style:solid;
+    border-width: 1px;
+    font-size: medium;
+
+}
+.boton:hover{
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
+}
+#disculpas{
+    font-size: 2em;
+    padding: 0em 3em ;
+    margin-top:1em 
+}
+
+/* PIE DE PAGINA */
+
+footer{
+    padding: 1em;
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
+    text-align: center;
+}
+
+
+
+/* MEDIA QUERYS */
+
+@media screen and (min-width: 700px){
+    .logotipo p{
+        display: block;
+        text-align: center;
+        margin: auto;
+        font-size: 1.2em;
+    }
+    nav a p {
+        display: block;
+        padding-left: 1em;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .logotipo p{
+        display: block;
+        text-align: center;
+        margin: auto;
+        font-size: 2em;
+    }
+}
