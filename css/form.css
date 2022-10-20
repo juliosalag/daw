@@ -1,16 +1,21 @@
 @import url('https://css.gg/css');
 :root {
+    /* Modo claro */
     --clr-background: #F6E1E1;
     --clr-primary: #ff9d76;
     --clr-secondary: #333366;
-    --clr-accent: #EB4D55;
+    --clr-letter: black;
+}
+
+*{
+    color: var(--clr-letter);
 }
 
 main{
 	font-family: 'Open Sans Condensed', arial, sans;
 	max-width: 500px;
 	padding: 30px;
-	background: #FFFFFF;
+	background: var(--clr-background);
 	margin: 50px auto;
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
 	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);

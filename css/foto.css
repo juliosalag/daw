@@ -1,9 +1,10 @@
 @import url('https://css.gg/css');
 :root {
+    /* Modo claro */
     --clr-background: #F6E1E1;
     --clr-primary: #ff9d76;
     --clr-secondary: #333366;
-    --clr-accent: #EB4D55;
+    --clr-letter: black;
 }
 
 * {
@@ -11,6 +12,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    color: var(--clr-letter);
 }
 
 

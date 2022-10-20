@@ -1,0 +1,7 @@
+:root {
+    /* Modo oscuro */
+    --clr-background: rgb(33, 33, 33);
+    --clr-primary: #f75e22;
+    --clr-secondary: #25254a;
+    --clr-letter: white;
+}
