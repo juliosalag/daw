@@ -15,6 +15,8 @@ window.addEventListener("load",function(){
     });
 });
 
+// Funciones de Usuario
+
 function iniciarSesion(){
     const usuario = document.getElementById("nombre");
     const clave = document.getElementById("password");

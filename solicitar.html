@@ -16,6 +16,8 @@
 
     <link rel="stylesheet" href="css/letraMayor.css" title="Modo Alto Contraste y Mayor Legibilidad">
     <link rel="stylesheet" href="css/altoContraste.css" title="Modo Alto Contraste y Mayor Legibilidad">
+
+    <script src="js/table.js"></script>
        
     <title>Photogram</title>
 </head>
@@ -48,40 +50,25 @@
     </header>
 
     <main>
-        <table>
-            <h2>Tarifas</h2>
+        <h2>Tarifas</h2>
+        <table id="tarifas">
             <tr>
-                <th>Concepto</th>
-                <th>Tarifa</th>
+                <td colspan="2"></td>
+                <td colspan="2">Blanco y Negro</td>
+                <td colspan="2">Color</td>
             </tr>
             <tr>
-                <td>menos de 5 páginas</td>
-                <td>0,10 euros por página</td>
-            </tr>
-            <tr>
-                <td>entre 5 y 11 páginas</td>
-                <td>0,08 euros por página</td>
-            </tr>
-            <tr>
-                <td>mas de 11 páginas</td>
-                <td>0,07 euros por página</td>
-            </tr>
-            <tr>
-                <td>Blanco y negro</td>
-                <td>0 euros</td>
-            </tr>
-            <tr>
-                <td>Color</td>
-                <td>0,05 euros por foto</td>
-            </tr>
-            <tr>
-                <td>Resolución > 300 dpi</td>
-                <td>0,02 euros por foto</td>
+                <td>Número de páginas</td>
+                <td>Número de fotos</td>
+                <td>150 - 300 dpi</td>
+                <td>450 - 900 dpi</td>
+                <td>150 - 300 dpi</td>
+                <td>450 - 900 dpi</td>
             </tr>
         </table>
 
+        <h2>Formulario de solicitud</h2>
         <form action="solicitar2.html" method="post">
-            <h2>Formulario de solicitud</h2>
             <label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre" maxlength="200" required>
             <br>
             <label for="titulo">Titulo del álbum: </label><input type="text" name="titulo" id="titulo" maxlength="200" required>
