@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/impresa.css" media="print">
 
     <link rel="stylesheet" href="css/claro.css" title="Modo Claro">
@@ -16,6 +17,9 @@
 
     <link rel="stylesheet" href="css/letraMayor.css" title="Modo Alto Contraste y Mayor Legibilidad">
     <link rel="stylesheet" href="css/altoContraste.css" title="Modo Alto Contraste y Mayor Legibilidad">
+
+
+    <script src="js/form.js"></script>
 
     <title>Photogram</title>
 </head>
@@ -50,18 +54,18 @@
     <main>
         <h2>Crear cuenta</h2>
         <form action="index2.html" method="post">
-            <label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre" required>
-            <label for="password">Contraseña: </label><input type="password" name="password" id="password" required>
-            <label for="password2">Repetir contraseña: </label><input type="password" name="password2" id="password2" required>
-            <label for="correo">Correo electrónico: </label><input type="email" name="correo" id="correo" required>
+            <label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre">
+            <label for="password">Contraseña: </label><input type="password" name="password" id="password">
+            <label for="password2">Repetir contraseña: </label><input type="password" name="password2" id="password2">
+            <label for="correo">Correo electrónico: </label><input type="text" name="correo" id="correo">
             <label for="sexo">Sexo: </label>
             <select name="sexo" id="sexo">
                 <option>Mujer</option>
                 <option>Hombre</option>
                 <option>Otro</option>
             </select>
-            <label for="fecha">Fecha de nacimiento: </label><input type="date" name="fecha" id="fecha" required>
-            <label for="ciudad">Ciudad: </label><input type="text" name="ciudad" id="ciudad" required>
+            <label for="fecha">Fecha de nacimiento (dd/mm/yyyy): </label><input type="text" name="fecha" id="fecha">
+            <label for="ciudad">Ciudad: </label><input type="text" name="ciudad" id="ciudad">
             <label for="paises">Pais: </label>
             <select name="paises" id="paises">
                 <option>Alemania</option>
@@ -75,11 +79,20 @@
                 <option>Portugal</option>
                 <option>Uruguay</option>
             </select>
-            <label for="foto">Foto: </label><input type="file" name="foto" id="foto" required>
-            <input type="submit" value="Crear cuenta">
+            <label for="foto">Foto: </label><input type="file" name="foto" id="foto" >
+            <input type="button" value="Crear cuenta" id="registrar" onclick="registrarUsuario()">
         </form>
     </main>
 
+
+    <section class="modal">
+        <div class="modal__container">
+            <h2 class="modal__title"> ERROR</h2>
+            <p class="modal__paragraph" id="errores">asjkajbdkcb</p>
+            <a href="#" class="modal__close">Volver a intentar</a>
+        </div>
+    </section>
+    
     <footer>
         <p>Julio Sala Gallardo y Ana Mª Soler Guijarro <br><br>&copy; 2022-2023 <br><br> Diseño de Aplicaciones Web</p>
     </footer>

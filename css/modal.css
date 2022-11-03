@@ -1,0 +1,65 @@
+@import url('https://css.gg/css');
+:root {
+    /* Modo claro */
+    --clr-background: #F6E1E1;
+    --clr-primary: #ff9d76;
+    --clr-secondary: #333366;
+    --clr-letter: black;
+}
+
+.modal{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    
+    opacity: 0;
+   pointer-events: none;
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+}
+.modal__container{
+     width: 90%;
+     background-color: var(--clr-background);
+     max-width: 600px;
+     max-height: 90%;
+     margin:auto;
+     border-radius: 6px;
+     padding: 3em 2.5em;
+     display: grid;
+     gap: 1em;
+     place-items: center;
+     grid-auto-columns: 100% ;
+}
+.modal__title{
+    font-size: 2.5em;
+}
+
+.modal__paragraph{
+    margin-bottom: 10px;
+}
+
+.modal__close{
+    text-decoration: none;
+    color: var(--clr-primary);
+    background-color: var(--clr-secondary);
+    padding: 1em 3em;
+    border: 1px solid;
+    border-color: var(--clr-primary);
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+    cursor: pointer;
+
+}
+
+.modal__close:hover{
+    color: var(--clr-letter);
+    background-color: var(--clr-background);
+}  
