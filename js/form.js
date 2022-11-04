@@ -137,6 +137,8 @@ function registrarUsuario(){
         document.getElementById('errores').innerHTML = mensaje;    
         modal.classList.add('modal--show');
     }
+    else
+        window.location.replace("index2.html"); 
 
 }
 
