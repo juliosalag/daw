@@ -125,7 +125,7 @@ function registrarUsuario(){
         else{
             fechaCreada = new Date(fechaFormateada[2], (fechaFormateada[1]-1), fechaFormateada[0]);
             if(!(fechaCreada.getFullYear() == fechaFormateada[2] && (fechaCreada.getMonth()+1) == fechaFormateada[1] && fechaCreada.getDate() == fechaFormateada[0]))
-                mensaje += "<p>La fecha de nacimiento esta mal introducida</p>";
+                mensaje += "<p>La fecha de nacimiento no es válida</p>";
             if((Date.now() - fechaCreada)/(1000*60*60*24*365) < 18)
                 mensaje += "<p>Tienes que ser mayor de edad</p>";
         }
