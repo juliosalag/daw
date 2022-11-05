@@ -18,9 +18,23 @@ function tablaPrecios(){
         col3 = col1 + numFotos * color;
         col4 = col1 + numFotos * (res300 + color);
 
-        tr.innerHTML = `<td>${i}</td><td>${numFotos}</td><td>${col1.toFixed(2)}</td><td>${col2.toFixed(2)}</td><td>${col3.toFixed(2)}</td><td>${col4.toFixed(2)}</td>`;
+        tr.appendChild(crearElemento('td', i));
+        tr.appendChild(crearElemento('td', numFotos));
+        tr.appendChild(crearElemento('td', col1.toFixed(2)));
+        tr.appendChild(crearElemento('td', col2.toFixed(2)));
+        tr.appendChild(crearElemento('td', col3.toFixed(2)));
+        tr.appendChild(crearElemento('td', col4.toFixed(2)));
+
         tabla.appendChild(tr);
     }
+}
+
+function crearElemento(tipo, texto){
+    var elemento = document.createElement(tipo);
+    var contenido = document.createTextNode(texto);
+    elemento.appendChild(contenido);
+
+    return elemento;
 }
 
 window.onload = function() {
