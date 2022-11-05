@@ -8,7 +8,7 @@ function tablaPrecios(){
     const color = 0.05;
     const res300 = 0.02;
 
-    const tabla = document.getElementById("tarifas");
+    const tabla = document.getElementById("precios");
 
     for(let i=1; i<16; i++){
         var tr = document.createElement('tr'), numFotos = i*3, col1, col2, col3,  col4;
@@ -23,4 +23,6 @@ function tablaPrecios(){
     }
 }
 
-tablaPrecios();
+window.onload = function() {
+    tablaPrecios();
+}

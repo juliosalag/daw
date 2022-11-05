@@ -20,7 +20,6 @@ window.addEventListener("load",function(){
 function iniciarSesion(){
     const usuario = document.getElementById("nombre");
     const clave = document.getElementById("password");
-    const clave2 = document.getElementById("password2");
     const modal = document.querySelector('.modal');
 
     var mensaje = "";
