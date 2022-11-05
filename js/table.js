@@ -13,7 +13,7 @@ function tablaPrecios(){
     for(let i=1; i<16; i++){
         var tr = document.createElement('tr'), numFotos = i*3, col1, col2, col3,  col4;
 
-        col1 = i * (i<5 ? menos5 : ((i>4 && i<12) ? entre5y11 : mas11));
+        col1 = (i<5 ? (i*menos5) : (i<12 ? (entre5y11*(i-4)+0.4) : (mas11*(i-11) + 0.96)));
         col2 = col1 + numFotos * res300;
         col3 = col1 + numFotos * color;
         col4 = col1 + numFotos * (res300 + color);
