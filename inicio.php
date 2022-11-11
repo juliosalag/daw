@@ -18,6 +18,8 @@
     include "inc/$nav.php";
 
     $message = "";
+    $name = "";
+    $pass = "";
 
     if(isset($_POST["nombre"]) && isset($_POST["password"])){
         $name = $_POST["nombre"];
@@ -26,13 +28,16 @@
         if(isset($name) && isset($pass)){
         
             if (empty($name)) 
-                $message = "Es necesario un nombre de usuario";
-            else if(empty($pass))
-                $message = "Es necesaria una contraseña";
-            else if(!login($name, $pass))
-                $message = "Usuario no validado";
-            else
-                header("Location: index.php");
+                $message = $message."<p>Es necesario un nombre de usuario</p>";
+            if(empty($pass))
+                $message = $message."<p>Es necesaria una contraseña</p>";
+
+            if($message == ""){
+                if(!login($name, $pass))
+                    $message = $message."<p>Usuario no validado</p>";
+                else
+                    header("Location: index.php");
+            }
             
         }
     }
@@ -60,8 +65,8 @@
     <main>
         <h2>Iniciar sesión</h2>
         <form action="" method="post">
-            <label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre">
-            <label for="password">Contraseña: </label><input type="password" name="password" id="password">
+            <label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre" value="<?php echo $name; ?>">
+            <label for="password">Contraseña: </label><input type="password" name="password" id="password" value="<?php echo $pass; ?>">
             <input type="submit" id="inicio" value="Iniciar Sesion">
             <p style="padding-top: 1em;"><?php if($message!="") { echo $message; } ?></p>
         </form>

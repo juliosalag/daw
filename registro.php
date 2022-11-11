@@ -25,17 +25,16 @@
         $pass = $_POST["password"];
         $pass2 = $_POST["password2"];
 
-        if(isset($name) && isset($pass)){
+        if(isset($name) && isset($pass) && isset($pass2)){
         
             if (empty($name)) 
-                $message = "Es necesario un nombre de usuario";
-            else if(empty($pass))
-                $message = "Es necesaria una contraseña";
-            else if(empty($pass2) || $pass != $pass2)
-                $message = "Es necesario repetir la contraseña";
-            /*else if(!login($name, $pass))
-                $message = "Usuario no validado";*/
-            else
+                $message = $message."<p>Es necesario un nombre de usuario</p>";
+            if(empty($pass))
+                $message = $message."<p>Es necesaria una contraseña</p>";
+            if(empty($pass2) || $pass != $pass2)
+                $message = $message."<p>Es necesario repetir la contraseña</p>";
+
+            if($message == "")
                 header("Location: inicio.php");
             
         }
@@ -46,8 +45,8 @@
         <h2>Crear cuenta</h2>
         <form action="" method="post">
             <label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre" value="<?php echo $name; ?>">
-            <label for="password">Contraseña: </label><input type="password" name="password" id="password">
-            <label for="password2">Repetir contraseña: </label><input type="password" name="password2" id="password2">
+            <label for="password">Contraseña: </label><input type="password" name="password" id="password" value="<?php echo $pass; ?>">
+            <label for="password2">Repetir contraseña: </label><input type="password" name="password2" id="password2" value="<?php echo $pass2; ?>">
             <label for="correo">Correo electrónico: </label><input type="text" name="correo" id="correo">
             <label for="sexo">Sexo: </label>
             <select name="sexo" id="sexo">
@@ -76,15 +75,6 @@
         </form>
 
     </main>
-
-
-    <section class="modal">
-        <div class="modal__container">
-            <h2 class="modal__title"> ERROR</h2>
-            <p class="modal__paragraph" id="errores">asjkajbdkcb</p>
-            <a href="#" class="modal__close">Volver a intentar</a>
-        </div>
-    </section>
     
     <?php  
     include "inc/footer.php";
