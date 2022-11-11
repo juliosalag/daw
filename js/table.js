@@ -1,3 +1,6 @@
+
+// ARREGLAR ?
+
 function tablaPrecios(){
     // Por página
     const menos5 = 0.1;
@@ -38,5 +41,6 @@ function crearElemento(tipo, texto){
 }
 
 window.onload = function() {
+    console.log("adios");
     tablaPrecios();
 }

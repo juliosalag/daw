@@ -1,53 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/form.css">
-    <link rel="stylesheet" href="css/impresa.css" media="print">
+    $estilo="form.css";
+    $js="table.js";
+    
+    include "controlador.php";
+    
+    include "inc/cabecerahtml.php";
+    include "inc/inicioheader.php";
 
-    <link rel="stylesheet" href="css/claro.css" title="Modo Claro">
-    <link rel="stylesheet" href="css/oscuro.css" title="Modo Oscuro">
-    <link rel="stylesheet" href="css/altoContraste.css" title="Modo Alto Contraste">
-    <link rel="stylesheet" href="css/letraMayor.css" title="Modo Mayor Legibilidad">
-
-    <link rel="stylesheet" href="css/letraMayor.css" title="Modo Alto Contraste y Mayor Legibilidad">
-    <link rel="stylesheet" href="css/altoContraste.css" title="Modo Alto Contraste y Mayor Legibilidad">
-
-    <script src="js/table.js"></script>
-       
-    <title>Photogram</title>
-</head>
-
-<body>
-    <header>
-        <div class="logotipo">
-            <a href="index.html"><img src="src/logo.png" alt="Isotipo de una camara"></a>
-            <h1>Photogram</h1>
-            <p>Comparte tus fotos con tus amigos</p>
-        </div>
-        <nav>
-            <a href="index.html">
-                <i class="gg-home"></i>
-                <p>Inicio</p>
-            </a>
-            <a href="buscar.html">
-                <i class="gg-search"></i>
-                <p>Buscar</p>
-            </a>
-            <a href="index.html">
-                <i class="gg-log-out"></i>
-                <p>Cerrar sesión</p>
-            </a>
-            <a href="usuario.html">
-                <i class="gg-user"></i>
-                <p>Usuario</p>
-            </a>
-        </nav>
-    </header>
+    session_start();
+    $nav="nav_no_inicio";
+    if(nombreLogin())
+        $nav="navinicio";
+    else
+        header("Location:aviso.php");
+    
+    include "inc/$nav.php";
+?>
 
     <main>
         <h2>Tarifas</h2>
@@ -99,8 +68,60 @@
             </tr>
         </table>
 
+        <?php
+        /*
+        // Por página
+        $menos5 = 0.1;
+        $entre5y11 = 0.08;
+        $mas11 = 0.07;
+
+        // Por foto
+        $color = 0.05;
+        $res300 = 0.02;
+        
+        $doc = new DOMDocument();
+    
+        $tabla = $doc->getElementById('precios');
+        echo $tabla;
+
+        for($i=1; $i<16; $i++){
+            $tr = $doc->createElement('tr'); 
+            $numFotos = $i*3;
+            $col1; 
+            $col2; 
+            $col3;
+            $col4;
+
+            $col1 = ($i<5 ? ($i*$menos5) : ($i<12 ? ($entre5y11*($i-4)+0.4) : ($mas11*($i-11) + 0.96)));
+            $col2 = $col1 + $numFotos * $res300;
+            $col3 = $col1 + $numFotos * $color;
+            $col4 = $col1 + $numFotos * ($res300 + $color);
+
+            $tr->appendChild(crearElemento('td', $i));
+            $tr->appendChild(crearElemento('td', $numFotos));
+            $tr->appendChild(crearElemento('td', number_format($col1, 2)));
+            $tr->appendChild(crearElemento('td', number_format($col2, 2)));
+            $tr->appendChild(crearElemento('td', number_format($col3, 2)));
+            $tr->appendChild(crearElemento('td', number_format($col4, 2)));
+
+            $tabla->appendChild($tr);
+        }
+
+        function crearElemento($tipo, $texto){
+            $doc = new DOMDocument;
+        
+            $elemento = $doc->createElement($tipo);
+            $contenido = $doc->createTextNode($texto);
+            $elemento->appendChild($contenido);
+
+            return $elemento;
+        }
+        */
+        ?>
+
+
         <h2>Formulario de solicitud</h2>
-        <form action="solicitar2.html" method="post">
+        <form action="solicitar2.php" method="post">
             <label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre" maxlength="200" required>
             <br>
             <label for="titulo">Titulo del álbum: </label><input type="text" name="titulo" id="titulo" maxlength="200" required>
@@ -156,12 +177,7 @@
             <input type="submit" value="Solicitar álbum">
         </form>
     </main>
+    <?php  
+    include "inc/footer.php";
 
-    <footer>
-        <p>Julio Sala Gallardo y Ana Mª Soler Guijarro <br><br>&copy; 2022-2023 <br><br> Diseño de Aplicaciones Web</p>
-    </footer>
-
-
-</body>
-
-</html>
+?>

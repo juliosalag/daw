@@ -36,7 +36,8 @@ function iniciarSesion(){
         modal.classList.add('modal--show');
     }
     else
-        window.location.replace("index2.html");   
+        window.location.replace("index.php");  
+     
 }
 
 function registrarUsuario(){
@@ -136,8 +137,9 @@ function registrarUsuario(){
         document.getElementById('errores').innerHTML = mensaje;    
         modal.classList.add('modal--show');
     }
-    else
-        window.location.replace("index2.html"); 
+    else{
+        window.location.replace("index.php"); 
+    }
 
 }
 
